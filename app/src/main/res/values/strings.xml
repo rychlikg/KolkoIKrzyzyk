@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Kolko I Krzyzyk</string>
+
+    <string name="title">Kółko i Krzyżyk</string>
+    <string name="invitation">Wybierz tryb gry:</string>
+    <string name="dzielonyEkran">Dzielony Ekran</string>
+    <string name="bot">Gra z Botem</string>
+    <string name="dwaUrzadenia">2 Urządzenia</string>
+
+    <string name="wybor">Wybierz figurę:</string>
+    <string name="kolko">Kółko</string>
+    <string name="krzyzyk">Krzyżyk</string>
+
+    <string name="wynikKolko">Kółko:</string>
+    <string name="wynikKrzyzyk">Krzyżyk:</string>
+
+    <string name="wynikGracz">Gracz:</string>
+    <string name="wynikBot">Bot:</string>
+
+    <string name="powrot">Powrót</string>
+</resources>
