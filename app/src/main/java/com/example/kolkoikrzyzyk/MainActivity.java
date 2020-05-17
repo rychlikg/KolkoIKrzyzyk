@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, wybor.class);
         startActivity(intent);
     }
+
+    public void DwaUrzadzenia(View view)
+    {
+        Intent intent = new Intent(this,wyborPolaczenia.class);
+        startActivity(intent);
+    }
 }
