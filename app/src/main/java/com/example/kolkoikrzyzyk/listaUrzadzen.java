@@ -25,6 +25,7 @@ public class listaUrzadzen extends AppCompatActivity {
     ArrayList<String> list = new ArrayList<String>();
     ArrayAdapter<String> arrayAdapter;
     Button szukaj;
+    ListView paredList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,21 @@ public class listaUrzadzen extends AppCompatActivity {
         scannList = findViewById(R.id.listaUrzadzen);
         Toast.makeText(getApplicationContext(),"Początek poszukiwań",Toast.LENGTH_LONG).show();
         szukaj = findViewById(R.id.button8);
+
+        paredList = findViewById(R.id.sparowane);
+        Set<BluetoothDevice> bt = bluetoothAdapter.getBondedDevices();
+        String [] tab = new String[bt.size()];
+        int inx = 0;
+        if(bt.size()>0)
+        {
+            for(BluetoothDevice device: bt)
+            {
+                tab[inx] = device.getName();
+                inx++;
+            }
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,tab);
+            paredList.setAdapter(adapter);
+        }
 
         szukaj.setOnClickListener(new View.OnClickListener(){
             @Override
