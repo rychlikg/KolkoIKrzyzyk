@@ -182,12 +182,10 @@ public class GraZBotem extends AppCompatActivity implements View.OnClickListener
             int rand = (int)Math.random()*1+1;
             if(rand == 1) {
                 kolko = true;
-                Toast.makeText(getApplicationContext(),"Kółko zaczyna",Toast.LENGTH_SHORT).show();
                 if(!graczKolko) ruchBota();
 
             }else  if (rand == 2){
                 krzyzyk = true;
-                Toast.makeText(getApplicationContext(),"Krzyżyk zaczyna",Toast.LENGTH_SHORT).show();
                 if(graczKolko) ruchBota();
             }
             pierwszaPartia = false;
@@ -196,13 +194,11 @@ public class GraZBotem extends AppCompatActivity implements View.OnClickListener
             if(kolko){
                 kolko = false;
                 krzyzyk = true;
-                Toast.makeText(getApplicationContext(),"Krzyżyk zaczyna",Toast.LENGTH_SHORT).show();
                 if(!graczKolko) ruchBota();
             }
             if(krzyzyk){
                 krzyzyk = false;
                 kolko = true;
-                Toast.makeText(getApplicationContext(),"Kółko zaczyna",Toast.LENGTH_SHORT).show();
                 if(graczKolko) ruchBota();
             }
         }
